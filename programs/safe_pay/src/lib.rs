@@ -42,7 +42,7 @@ fn transfer_escrow_out<'info>(
     token_program: AccountInfo<'info>,
     destination_wallet: AccountInfo<'info>,
     amount: u64
-) -> ProgramResult {
+) -> Result<()> {
 
     // Nothing interesting here! just boilerplate to compute our signer seeds for
     // signing on behalf of our PDA.
