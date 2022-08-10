@@ -47,7 +47,7 @@ describe('safe_pay', () => {
     }
 
     const createMint = async (connection: anchor.web3.Connection): Promise<anchor.web3.PublicKey> => {
-        const tokenMint = new anchor.web3.Keypair();
+        const tokenMint = new anchor.web3.Keypair(); //Generates a new keypair
         const lamportsForMint = await provider.connection.getMinimumBalanceForRentExemption(spl.MintLayout.span);
         let tx = new anchor.web3.Transaction();
 
